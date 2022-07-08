@@ -58,8 +58,8 @@ public class LoginPage extends BasePage {
 	
 	public void logarUsuario(String email, String senha) {
 		botaoLogin.click();
-		emailLogar.sendKeys(email);
-		passwordLogar.sendKeys(senha);
+		emailLogar.sendKeys("joaogomes@email.com");
+		passwordLogar.sendKeys("123456");
 		botaoLogar.click();
 	}
 

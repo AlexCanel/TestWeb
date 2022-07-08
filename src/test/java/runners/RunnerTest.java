@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin = {"pretty", "html:target/cucumber-report"},
 		features = "src\\test\\resources\\features",
 		glue = "stepsDefinitions",
-		tags = "@comprarProdutos",
+		tags = "@carrinhocompras",
 		snippets = SnippetType.CAMELCASE,
 		monochrome = true,
 		dryRun = false

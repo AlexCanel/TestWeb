@@ -1,6 +1,5 @@
 package utils;
 
-import java.sql.Driver;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;

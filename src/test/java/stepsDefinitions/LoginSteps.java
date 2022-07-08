@@ -26,6 +26,21 @@ public class LoginSteps {
 	public void clicarNoBotaoCrateAccount() {
 		Na(LoginPage.class).botaoCreateAccount();
 	}
+	
+	@Quando("digitar para logar o emai {string}")
+	public void digitarParaLogarOEmai(String string) {
+		Na(LoginPage.class).emailLogar(string);
+	}
+
+	@Quando("informar uma senha para logoar {string}")
+	public void informarUmaSenhaParaLogoar(String string) {
+		Na(LoginPage.class).passwordLogar(string);;
+	}
+	
+	@Quando("cliar em logar")
+	public void cliarEmLogar() {
+		Na(LoginPage.class).botaoLogar();
+	}
 
 	@Entao("o sistema exibe a mensagem de Invalid email address.")
 	public void oSistemaExibeAMensagemDeInvalidEmailAddress() {
@@ -36,5 +51,13 @@ public class LoginSteps {
 	public void abriraAPaginaCreateAccount() {
 		assertEquals("CREATE AN ACCOUNT",driver.findElement(By.xpath("//h1[contains(.,'Create')]")).getText());
 	}
+	
+	@Entao("o sistema informara que o usuario esta logado")
+	public void oSistemaInformaraQueOUsuarioEstaLogado() {
+		assertEquals("Alex Ferreira Canel",driver.findElement(By.xpath("//span[contains(.,\"Alex Ferreira Canel\")]")).getText());
+	}
+	
+	
+	
 
 }

@@ -8,9 +8,21 @@ import org.openqa.selenium.By;
 
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import pageObjects.LoginPage;
 import pageObjects.OrderPage;
+import pageObjects.SearchPage;
 
 public class ComprarProdutosSteps {
+	
+	@Quando("logar no sistema")
+	public void logarNoSistema() {
+	    Na(LoginPage.class).logarUsuario("joaogomes@email.com","123456");
+	}
+
+	@Quando("adicionar um item no carrinho")
+	public void adicionarUmItemNoCarrinho() throws Exception {
+	    Na(SearchPage.class).buscarProdutos("Short");
+	}
 	
 	@Quando("clicar em Proceed to checkout")
 	public void clicarEmProceedToCheckout() {

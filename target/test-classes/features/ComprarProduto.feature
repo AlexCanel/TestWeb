@@ -4,6 +4,9 @@
 @comprarProdutos
 Funcionalidade: Comprar Produtos
 	
+	Contexto:
+			Quando logar no sistema
+			E adicionar um item no carrinho 
 
 	@Compraconcluida
 	Cenario: comprar com itens no carrinho
